@@ -43,6 +43,9 @@ angular.module('starter.controllers', [])
 .controller('proWorldCtrl', function($scope){
   console.log("I am ProWorld")
 })
+.controller('playerCtrl', function($scope){
+  console.log("List of Players ")
+})
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
