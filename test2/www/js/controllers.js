@@ -40,7 +40,9 @@ angular.module('starter.controllers', [])
     }, 1000);
   };
 })
-
+.controller('proWorldCtrl', function($scope){
+  console.log("I am ProWorld")
+})
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },

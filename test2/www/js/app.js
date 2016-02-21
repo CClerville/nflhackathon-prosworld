@@ -31,33 +31,56 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
-  .state('app.search', {
-    url: '/search',
+  .state('app.proWorld', {
+    url: '/proWorld',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/proWorld.html'
       }
     }
   })
+  .state('app.dailyInput', {
+    url: '/dailyInput',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/dailyInput.html'
+      }
+    }
+  })
+  .state('app.proBoard', {
+    url: '/proBoard',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/proBoard.html'
+      }
+    }
+  })
+  .state('app.player', {
+    url: '/player',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/player.html',
+      }
+    }
+  })
+  // .state('app.search', {
+  //   url: '/search',
+  //   views: {
+  //     'menuContent': {
+  //       templateUrl: 'templates/search.html'
+  //     }
+  //   }
+  // })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.accountSettings', {
+      url: '/accountSettings',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/accountSettings.html'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
+
 
   .state('app.single', {
     url: '/playlists/:playlistId',
@@ -69,5 +92,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app');
 });
